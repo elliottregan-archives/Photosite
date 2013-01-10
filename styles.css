@@ -1,0 +1,217 @@
+ 
+/* font: [weight] [style] [variant] size [ / line-height] family; */
+html{
+}
+
+body {
+	font-family: Helvetica, sans-serif;
+	color: white;
+	background-color: black;
+}
+
+p {
+	text-indent:50px;
+	text-align:center;
+	letter-spacing:2px;
+	font-size: 1.2em;
+	font-variant:small-caps;
+	position:relative;
+	top:50px;
+	left:100px;
+	width:80%;
+	float: left;
+}
+	
+img {
+    padding:0px;
+	cursor:default;
+	max-width:100%;
+	max-height:95%;
+}
+
+.grid{
+	float: left;
+	padding: 2px;
+	opacity: .5;
+	-webkit-transition-property: opacity;
+	-moz-transition-property: opacity;
+	transition-property: opacity;
+	-webkit-transition-duration: .5s;
+	-moz-transition-duration: .5s;
+	transition-duration: .5s;
+}
+.grid:hover{
+	opacity:1;
+}
+.grid:active{
+	opacity: .5;
+	-webkit-transition-duration: .1s;
+	-moz-transition-duration: .1s;
+	transition-duration: .1s;
+}
+
+#menu li {
+	position: relative;
+	font-family:Century Gothic,sans-serif;
+	font-size:1.5em;
+	display: inline;
+	list-style: none;
+	color: black;  
+    display: inline-block;  
+    padding: 5px 15px;  
+    outline: none; 
+	text-shadow: 0px 0px 4px rgba(0,0,0,0.4); 
+    text-decoration: none;
+	cursor: default;
+}
+#menu li a, #logo {
+	-webkit-transition-property: text-shadow;
+	-moz-transition-property: text-shadow;
+	transition-property: text-shadow;
+	-webkit-transition-duration: 1s;
+	-moz-transition-duration: 1s;
+	transition-duration: 1s;  
+}
+
+#menu li a:hover, #logo:hover {  
+	text-shadow: 0px 0px 10px rgba(0,0,0,0.65); 
+	cursor: default;  
+}  
+  
+#menu li a:active, #logo:active{  
+    text-shadow: 0px 0px 6px rgba(0,0,0,0.5);  
+	-webkit-transition-duration: .25s;  
+    -moz-transition-duration: .25s;
+	transition-duration: .25s;  
+  
+}  
+
+#header{
+	position: fixed;
+	height: 150px;
+	width: 120%;
+	top: 35px;
+	margin-left:-70px;
+	background: url(images/trans_white.png) fixed repeat;
+	z-index:6000;
+}
+
+#logo{
+	font-family: Didot,serif;
+	text-shadow: 0px 0px 2px grey;
+	position: absolute;
+	bottom: 0px;
+	left: 100px;
+	cursor:default;
+	line-height:10px;
+}
+
+
+#navigation {
+	position: absolute;
+	text-align: right;
+	bottom: -27px;
+	width:500px;
+	right: 20%;
+}
+
+#content {
+	margin-top: 190px;
+	float:left;
+	padding-bottom:30px;
+}
+
+.bg_tan {
+	background: url(images/tan.png) fixed repeat;
+} 
+
+#contact{
+	position: relative;
+	top: 35px;
+	left: 45px;
+	font-size:3em;
+	font-family: Didot,serif;
+	cursor: default;
+	color:white;
+}
+
+#contact a{	
+	-webkit-transition-duration: .5s;  
+    -webkit-transition-timing-function: ease-out;  
+    -moz-transition-duration: .5s;  
+    -moz-transition-timing-function: ease-out; 
+ 	color:grey;
+}
+
+#contact a:hover{  
+	color: white;
+}  
+
+@keyframes backgd{
+	0% {background:url(images/photos/backgs/1.jpg);background-size:100%;ackground-repeat: no-repeat;}
+	100% {background:url(images/photos/backgs/2.jpg);background-size:100%;ackground-repeat: no-repeat;}
+}
+
+.bg {
+	background: url(images/photos/backgs/1.jpg);
+	background-color: black;
+	background-size:100% ;
+	background-repeat: no-repeat;
+	animation: backgd 5s;
+}
+
+/* Black Border */
+#top, #bottom, #left, #right {
+        background: black;
+        position: fixed;
+		z-index:6000;
+        }
+        #left, #right {
+                top: 0; bottom: 0;
+                width: 15px;
+                }
+                #left { left: 0; }
+                #right { right: 0; }
+
+        #top, #bottom {
+                left: 0; right: 0;
+                height: 15px;
+                }
+                #top { top: 0; }
+                #bottom { bottom: 0; }
+
+.black_overlay{
+	display: none;
+	position: absolute;
+	vertical-align: center;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	z-index:8000;
+	-moz-opacity: 0.8;
+	opacity:.80;
+	filter: alpha(opacity=80);
+}
+ 
+.white_content {
+	color: white;
+	display: none;
+	position: absolute;
+	top: 10%;
+	left: 10%;
+	right: 15%;
+	width: 80%;
+	height: 80%;
+	border: 16px solid white;
+	background-color: black;
+	z-index:8001;
+	overflow: auto;	
+}
+
+
+/* Fix to get the stupid #logo link to format correctly.*/
+a:-webkit-any-link{text-decoration:none;color:black;}
+a:-moz-any-link{text-decoration:none;color:black;}
+
